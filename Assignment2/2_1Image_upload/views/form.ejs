@@ -1,0 +1,21 @@
+<form method="post" action="/upload-profile-pic" enctype="multipart/form-data">
+ <div>
+     <lable> Select YOur Profile Picture: </lable>
+     <input type="file" name="myProfile"/>
+ </div>
+ <div> 
+     <input type="submit" name="btn_upload" value="Upload"/>
+ </div>
+</form>
+
+<hr />
+
+<form method="post" action="/upload-multiple-images" enctype="multipart/form-data">
+    <div>
+        <lable> Select Multiple Image: </lable>
+        <input type="file" name="Multiple_image" multiple/>
+    </div>
+    <div> 
+        <input type="submit" name="btn_multiple_upload" value="Upload"/>
+    </div>
+</form>
