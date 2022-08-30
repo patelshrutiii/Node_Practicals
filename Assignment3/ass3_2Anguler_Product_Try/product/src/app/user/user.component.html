@@ -1,0 +1,22 @@
+<p>user works!</p>
+<p>{{firstn}}</p>
+<p>{{lastn}}</p>
+<p>{{email}}</p>
+<!-- <form [FormGroup]=userform (ngSubmit)=onsubmit(userform.value)> -->
+    <!-- <form #userform="ngForm" (submit)=onsubmit()> -->
+
+<!-- <form [formGroup]="userform" (ngSubmit)="submit(userform.value)">
+    first Name:<input type="text" name="firstn" formControlName="firstn">
+    last Name:<input type="text" name="lastn" formControlName="lastn">
+    Email:<input type="text" name="email" formControlName="email">
+    <input type="submit" [disabled]="userform.invalid">
+
+</form> -->
+<form #userform="ngForm" (submit)="onsubmit(userform.value)">
+   
+    first Name:<input type="text" name="firstn" ngModel>
+    last Name:<input type="text" name="lastn" ngModel>
+    Email:<input type="text" name="email" ngModel>
+   
+    <input type="submit" value="Submit" >
+</form>

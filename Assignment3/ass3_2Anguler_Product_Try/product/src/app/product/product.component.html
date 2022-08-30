@@ -1,0 +1,26 @@
+<p>product works!</p>
+<p>{{roll_no}}</p>
+<p> {{content}} </p>
+<p>{{myDate | date: 'dd-MM-yyyy'}}</p>
+<table>
+    <ul>
+    <li *ngFor="let product of pros">
+      <span> {{product.id}}{{product.name}}</span> 
+       
+    </li>
+    </ul>
+    <!-- <select [(ngModel)]="selected_peeps">
+        <option *ngFor="let people of peoples"
+          [attr.data-age]="people.age"
+          [attr.data-occupation]="people.occupation">
+          {{ people.name }}
+        </option>    
+      </select> -->
+      <select id='peeps' name='people'>
+        <option *ngFor="let product of pros" [value]="product.id">
+          {{product.name}}
+        </option>    
+    </select>
+
+    
+</table>
