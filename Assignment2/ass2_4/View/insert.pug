@@ -1,0 +1,45 @@
+html 
+ body 
+    form(action="/store",method="post",enctype="multipart/form-data")
+        lable Name  
+        input(type="text",name="name") 
+        br
+        br 
+        lable Address
+        input(type="text",name="address") 
+        br
+        br
+        lable Email 
+        input(type="text",name="email") 
+        br
+        br
+        lable Password 
+        input(type="password",name="password") 
+        br
+        br 
+        lable Gender :
+        lable  Male
+        input(type="radio",name="gender",value="Male")
+        lable  Female
+        input(type="radio",name="gender",value="Female") 
+        br
+        br 
+        label City
+        select(name="city")
+            option(value="Surat") Surat
+            option(value="Ahmedabad") Ahmedabad
+            option(value="Bharuch") Bharuch
+            option(value="Vadodara") Vadodara
+            option(value="Vapi") Vapi  
+        br
+        br 
+        label Date 
+        input(type="date",name="date") 
+        br
+        br 
+        label pic 
+        input(type="file",name="pic") 
+        br
+        br 
+        input(type="submit",value="submit")
+         

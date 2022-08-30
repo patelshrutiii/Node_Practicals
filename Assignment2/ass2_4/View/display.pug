@@ -1,0 +1,37 @@
+html 
+    body
+    a(href='/insert') Add Student
+    br
+    br
+    table(border="5px")
+        tr 
+            th Name
+            th Address
+            th Email
+            th Gender
+            th City
+            th Date
+            th Pic
+            th Update 
+            th Delete 
+        tr 
+        
+            each item in data
+                tr
+                th  #{item.name}
+                th  #{item.address}
+                th  #{item.email}
+                th  #{item.gender}
+                th  #{item.city}
+                th  #{item.date}
+
+                th(scope="row")
+                    img.image(src='http://localhost:5000/image/' + item.pic,height="100px",width="100px")
+                th(scope="row")
+                    a(href='/update/' + item._id) Update
+                th(scope="row")
+                    a(href='/delete/' + item._id) Delete 
+    br
+    a(href="/logout") Logout 
+         
+    

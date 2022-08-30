@@ -1,0 +1,39 @@
+html 
+ body 
+    form(action='/updateurl',method="post")
+        input(type="hidden",name="id",value=data._id)
+        lable Name  
+        input(type="text",name="name",value=data.name) 
+        br
+        br 
+        lable Address
+        input(type="text",name="address",value=data.address) 
+        br
+        br
+        lable Email 
+        input(type="text",name="email",value=data.email) 
+        br
+        br
+        lable Gender :
+        lable  Male
+        input(type="radio",name="gender",value="Male",checked=data.gender='Male')
+        lable  Female
+        input(type="radio",name="gender",value="Female",checked=data.gender='Female') 
+        br
+        br 
+        label City
+        select(name="city")
+            option(selected = data.city) #{data.city}
+            option(value="Surat") Surat
+            option(value="Ahmedabad") Ahmedabad
+            option(value="Bharuch") Bharuch
+            option(value="Vadodara") Vadodara
+            option(value="Vapi") Vapi  
+        br
+        br 
+        label Date 
+        input(type="date",name="date") 
+        br
+        br 
+        input(type="submit",value="submit")
+         
