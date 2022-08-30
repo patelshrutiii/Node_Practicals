@@ -1,0 +1,88 @@
+<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="margin-top:3cm;">
+<div  class="card">
+    <div class="card-body">
+        <div class="col-md-12" style="margin-bottom: 1cm;">
+            <h3>Add Your Product</h3>
+        </div>
+        <form [formGroup]="angForm" novalidate enctype="multipart/form-data">
+      
+          <div class="row">
+        <div class="col-md-6"> 
+        <div class="form-group">
+          <label class="col-md-4">Name</label>
+          <input type="text"  formControlName="name" class="form-control" />
+        </div>
+        <!-- <div *ngIf="angForm.controls['name'].errors && angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['name'].errors.required">
+            name is required.
+          </div>
+        </div> -->
+        </div>
+    <div class="col-md-6"> 
+        <div class="form-group">
+          <label class="col-md-4">Price </label>
+          <input type="number"  formControlName="price" class="form-control" />
+        </div>
+        <!-- <div *ngIf="angForm.controls['price'].errors && angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['price'].errors.required">
+            Price is required.
+          </div>
+        </div> -->
+    </div>
+</div><br>
+<div class="row">
+    <div class="col-md-6"> 
+        <div class="form-group">
+          <label class="col-md-4">Manufacture Date </label>
+          <input type="date"  formControlName="mdate" class="form-control" />
+        </div>
+        <!-- <div *ngIf="angForm.controls['mdate'].errors && angForm.controls['mdate'].invalid && (angForm.controls['mdate'].dirty || angForm.controls['mdate'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['mdate'].errors.required">
+            Manufacture Date is required.
+          </div>
+        </div> -->
+    </div>
+    <div class="col-md-6"> 
+        <div class="form-group">
+          <label class="col-md-4">Brand </label>
+          <input type="text"  formControlName="brand" class="form-control" />
+        </div>
+        <!-- <div *ngIf="angForm.controls['brand'].errors  && angForm.controls['brand'].invalid && (angForm.controls['brand'].dirty || angForm.controls['brand'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['brand'].errors.required">
+            Brand is required.
+          </div>
+        </div> -->
+    </div>
+</div><br>
+<div class="row">
+    <div class="col-md-6"> 
+        <div class="form-group">
+          <label class="col-md-4">Description</label>
+          <input type="text"  formControlName="description" class="form-control" />
+        </div>
+        <!-- <div *ngIf="angForm.controls['description'].errors  && angForm.controls['description'].invalid && (angForm.controls['description'].dirty || angForm.controls['description'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['description'].errors.required">
+            description is required.
+          </div>
+        </div> -->
+    </div>
+    <!-- <div class="col-md-6"> 
+        <div class="form-group">
+          <label class="col-md-4">Image </label>
+          <input type="file"  formControlName="img" class="form-control" />
+        </div>
+    </div> -->
+</div><br>
+    <div class="row">
+   
+    <div class="col-md-6"style="margin-top:15px;text-align:end;">
+        <div class="form-group">
+            <label class="col-md-4">.</label>
+           <input type="submit"  (click)="addProduct(angForm.controls['name'].value, angForm.controls['price'].value, angForm.controls['mdate'].value,angForm.controls['brand'].value,angForm.controls['description'].value)" class="btn btn-primary">
+        </div>
+    </div>
+</div>
+      </form>
+    </div>
+  </div>
+  </div>
